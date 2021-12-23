@@ -26,3 +26,8 @@ personalMovieDB.movies[lastMovie1] = ratingLastMovie1;
 personalMovieDB.movies[lastMovie2] = ratingLastMovie2;
 
 console.log(personalMovieDB);
+
+
+
+
+
