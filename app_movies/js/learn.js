@@ -32,3 +32,18 @@ switch (num) {
         break;
 
 }
+
+let n = 0;
+while (n <= 10) {
+    console.log(n);
+    n++;
+}
+
+for (let i = 1; i < 10; i++) {
+    
+    console.log(i);
+    if (i == 5) {
+        break;
+    }
+    
+}
