@@ -17,33 +17,63 @@ if (1) {
 //     }
 // }
 
-const num = 160;
-(num > 150) ? console.log('ДА') : console.log('НЕТ');
+// const num = 160;
+// (num > 150) ? console.log('ДА') : console.log('НЕТ');
 
-switch (num) {
-    case 150: 
-        console.log('В точку');
-        break;
-    case 260: 
-        console.log('Это дохуя');
-        break;
-    default: 
-        console.log('Нет соответсвий');
-        break;
+// switch (num) {
+//     case 150: 
+//         console.log('В точку');
+//         break;
+//     case 260: 
+//         console.log('Это дохуя');
+//         break;
+//     default: 
+//         console.log('Нет соответсвий');
+//         break;
 
-}
+// }
 
-let n = 0;
-while (n <= 10) {
-    console.log(n);
-    n++;
-}
+// let n = 0;
+// while (n <= 10) {
+//     console.log(n);
+//     n++;
+// }
 
-for (let i = 1; i < 10; i++) {
+// for (let i = 1; i < 10; i++) {
     
-    console.log(i);
-    if (i == 5) {
-        break;
-    }
+//     console.log(i);
+//     if (i == 5) {
+//         break;
+//     }
     
+// }
+let num = 10;
+function showFirstMessage(text) {
+    console.log(text);
+    let num = 20;
+    console.log(num);
 }
+
+showFirstMessage(123);
+console.log(num);
+
+
+function calc(a, b) {
+    return (a + b);
+}
+console.log(calc(10,5));
+
+function ret() {
+    let num = 50;
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+
+const logger = function() {
+    console.log("Hello");
+};
+
+logger();
