@@ -14,25 +14,29 @@ const personalMovieDB = {
 
 if (personalMovieDB.count < 10 ) {
     alert("Слишком мало фильмов");
-}
-if (30 >= personalMovieDB.count >= 10 ) {
-    alert("Просмотрено довольно мало фильмов");
-}
-if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
+} else if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
     alert("Вы классический зритель");
-}
-if (personalMovieDB.count > 30 ) {
+} else if (personalMovieDB.count > 30 ) {
     alert("Вы киноман");
+} else {
+    alert("Ошибка");
 }
 
 
 
-let lastMovie = [];
-let ratingLastMovie = [];
+
 for (let i = 1; i <= 2; i++) {
-    lastMovie[i] = prompt("Один из последних просмотренных фильмов?", "");
-    ratingLastMovie[i] = prompt("Насколько оцените его?", "");
-    personalMovieDB.movies[lastMovie[i]] = ratingLastMovie[i];
+    const lastMovie = prompt("Один из последних просмотренных фильмов?", "");
+    const ratingLastMovie = prompt("Насколько оцените его?", "");
+
+    if (lastMovie != null && ratingLastMovie != null && lastMovie != '' && ratingLastMovie != '' && lastMovie.length < 50 ) {
+        personalMovieDB.movies[lastMovie] = ratingLastMovie;
+
+    } else {
+        i--;
+    }
+    
+   
 
 }
 
