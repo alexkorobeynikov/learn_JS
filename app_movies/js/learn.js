@@ -50,7 +50,7 @@ if (1) {
 let num = 10;
 function showFirstMessage(text) {
     console.log(text);
-    let num = 20;
+     num = 20;
     console.log(num);
 }
 
@@ -77,3 +77,31 @@ const logger = function() {
 };
 
 logger();
+
+const calcs = (a, b) => a + b;
+
+// Lesson 17 - Methods 
+
+
+const str = "sasha";
+console.log(str.length);
+
+console.log(str.toUpperCase());
+
+const fruit = "Some fruit";
+console.log(fruit.indexOf("fruit"));
+
+const logg = "sasha super";
+
+console.log(logg.slice(6));
+
+console.log(logg.substring(6, 11));
+
+const num1 = 12.2;
+
+console.log(Math.round(num1));
+
+const test = "12.2px";
+
+console.log(parseInt(test));
+console.log(parseFloat(test));

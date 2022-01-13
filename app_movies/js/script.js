@@ -1,6 +1,16 @@
 'use strict';
 
-const numberOfFilms = +prompt("Сколько фильмов Вы посмотрели?", "");
+let numberOfFilms ;
+
+function start () {
+    numberOfFilms = +prompt("Сколько фильмов Вы посмотрели?", "");
+    
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)  ) {
+        numberOfFilms = +prompt("Сколько фильмов Вы посмотрели?", "");
+    }
+}
+
+start();
 
 
 const personalMovieDB = {
@@ -12,33 +22,38 @@ const personalMovieDB = {
 
 };
 
-if (personalMovieDB.count < 10 ) {
-    alert("Слишком мало фильмов");
-} else if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
-    alert("Вы классический зритель");
-} else if (personalMovieDB.count > 30 ) {
-    alert("Вы киноман");
-} else {
-    alert("Ошибка");
-}
 
 
-
-
-for (let i = 1; i <= 2; i++) {
-    const lastMovie = prompt("Один из последних просмотренных фильмов?", "");
-    const ratingLastMovie = prompt("Насколько оцените его?", "");
-
-    if (lastMovie != null && ratingLastMovie != null && lastMovie != '' && ratingLastMovie != '' && lastMovie.length < 50 ) {
-        personalMovieDB.movies[lastMovie] = ratingLastMovie;
-
-    } else {
-        i--;
-    }
+function rememberMyFilms() {
+    for (let i = 1; i <= 2; i++) {
+        const lastMovie = prompt("Один из последних просмотренных фильмов?", "");
+        const ratingLastMovie = prompt("Насколько оцените его?", "");
     
-   
+        if (lastMovie != null && ratingLastMovie != null && lastMovie != '' && ratingLastMovie != '' && lastMovie.length < 50 ) {
+            personalMovieDB.movies[lastMovie] = ratingLastMovie;
+    
+        } else {
+            i--;
+        }
+    }
+}
+
+rememberMyFilms();
+
+function detectPersonalLevel() {
+    if (personalMovieDB.count < 10 ) {
+        alert("Слишком мало фильмов");
+    } else if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
+        alert("Вы классический зритель");
+    } else if (personalMovieDB.count > 30 ) {
+        alert("Вы киноман");
+    } else {
+        alert("Ошибка");
+    }
 
 }
+
+detectPersonalLevel();
 
 
 
