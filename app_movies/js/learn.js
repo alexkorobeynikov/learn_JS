@@ -105,3 +105,21 @@ const test = "12.2px";
 
 console.log(parseInt(test));
 console.log(parseFloat(test));
+
+
+// Lesson 19
+
+function first() {
+
+    //ddfdf
+    setTimeout(() => {
+        console.log(1);
+        
+    }, 500);
+}
+
+function second() {
+    console.log(2);
+}
+first();
+second();

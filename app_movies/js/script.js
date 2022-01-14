@@ -18,10 +18,26 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    privat: true
 
 };
 
+function showMyDB(hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+
+showMyDB(personalMovieDB.privat);
+
+function writeYourGenres() {
+    for (let i = 0; i < 3; i++) {
+        personalMovieDB.genres[i - 1] = prompt("Ваш любимый жанр под номером " + i, "");
+    }
+}
+
+writeYourGenres();
+    
 
 
 function rememberMyFilms() {
@@ -42,7 +58,7 @@ rememberMyFilms();
 
 function detectPersonalLevel() {
     if (personalMovieDB.count < 10 ) {
-        alert("Слишком мало фильмов");
+        alert("Мало фильмов");
     } else if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
         alert("Вы классический зритель");
     } else if (personalMovieDB.count > 30 ) {
